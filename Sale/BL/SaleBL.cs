@@ -1,5 +1,4 @@
 namespace PerfumeSystem;
-
 public class SaleBL
 {
     public static int GetTotalIncome(List<Sale> sales)
@@ -16,22 +15,18 @@ public class SaleBL
         int max = 0;
         int min = 0;
         int ans = 0;
-
         if (sales> max)
         {
             sales = max;
         }
-        
         if (sales< min)
         {
             sales = min;
         }
-      
-        for(int i =0; i<sales; i++)
+        for (int i = 0; i < sales; i++)
         {
-            ans = sales > max && sales < min; 
+            ans = sales > max && sales < min;
         }
-
         return ans;
 
    }
