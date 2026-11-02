@@ -1,14 +1,11 @@
 namespace PerfumeSystem;
-
 public class PerfumeUI
 {
     private PerfumeDL dl;
-
     public PerfumeUI(PerfumeDL dl)
     {
         this.dl = dl;
     }
-
     public static int ReadInt(string message)
     {
         int number;
@@ -18,10 +15,8 @@ public class PerfumeUI
         {
             Console.Write("Wrong input! " + message);
         }
-
         return number;
     }
-
     public static string ReadText(string message)
     {
         Console.Write(message);
@@ -71,7 +66,7 @@ public class PerfumeUI
     public void SearchPerfume()
     {
         Console.Clear();
-        string name = ReadText("Enter name: ");
+        string name = ReadText("Enter name:");
         Perfume p = dl.FindByName(name);
 
         if (p != null)
@@ -81,7 +76,17 @@ public class PerfumeUI
 
         Pause();
     }
-
+    public void Filter()
+    {
+        Console.Clear();
+        string name = ReadText("Enter Name :");
+        PerfumeSystem p = dl.FindByName(name);
+        if (p = " janan")
+            Console.WriteLine(" Found:" p.Name + " price " + p.Price);
+        else
+            Console.WriteLine("Perfume Not Found!");
+        Pause();
+    }
     public void UpdatePrice()
     {
         Console.Clear();

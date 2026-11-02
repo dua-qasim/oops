@@ -76,7 +76,17 @@ public class SaleUI
         Console.WriteLine("\nTotal Income: " + SaleBL.GetTotalIncome(saleDL.GetAll()));
         PerfumeUI.Pause();
     }
-
+    public void maxtommin()
+    {
+        Console.Clear();
+        Console.WriteLine("ID\tCustomer\tPerfume\t\tQty\tBill");
+        foreach ( Sales s in saleDL.)
+        {
+            Console.WriteLine(s.Id + "\t" + s.CustomerName + "\t\t" + s.PerfumeName + "\t" + s.Quantity + "\t" + s.Bill);
+        }
+        Console.WriteLine("MAX to MIN Values are  " + SaleBLGetmaxtomin(saleDL.GetAll()));
+        PerfumeUI.Pause();
+    }
     public void UpdateSale()
     {
         Console.Clear();

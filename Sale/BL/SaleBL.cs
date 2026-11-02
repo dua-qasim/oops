@@ -11,4 +11,28 @@ public class SaleBL
         }
         return total;
     }
+    public static int Getmaxtomin(List<Sale>sales)
+    {
+        int max = 0;
+        int min = 0;
+        int ans = 0;
+
+        if (sales> max)
+        {
+            sales = max;
+        }
+        
+        if (sales< min)
+        {
+            sales = min;
+        }
+      
+        for(int i =0; i<sales; i++)
+        {
+            ans = sales > max && sales < min; 
+        }
+
+        return ans;
+
+   }
 }

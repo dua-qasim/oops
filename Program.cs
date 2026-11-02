@@ -109,7 +109,6 @@ class Program
             Console.WriteLine("4. Exit");
             Console.Write("Enter choice: ");
             string choice = Console.ReadLine();
-
             if (choice == "1") perfumeUI.ViewPerfumes();
             else if (choice == "2") perfumeUI.SearchPerfume();
             else if (choice == "3") saleUI.BuyPerfume(perfumeDL, customerDL);
